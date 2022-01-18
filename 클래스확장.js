@@ -1,4 +1,4 @@
-// 상속
+// 클래스 상속(확장)
 
 class Vehicle {
   constructor(name, wheel) {
