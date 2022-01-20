@@ -1,35 +1,23 @@
-// 상속
+// Number
 
-class Vehicle {
-  constructor(name, wheel) {
-    this.name = name
-    this.wheel = wheel
-  }
-}
-const myVehicle = new Vehicle ('운송수단', 2)
-console.log(myVehicle)
+const pi = 3.14159265358979
+console.log(pi)
 
-class Bicycle extends Vehicle {
-  constructor(name, wheel){
-    // super Vehicle이 실행
-    super(name, wheel)
-  }
-}
+const str = pi.toFixed(2) //toFiced는 문자데이터로 반환
+console.log(str)
+console.log(typeof str)
 
-const myBicycle = new Bicycle('삼천리', 2)
-const daughtersBicycle = new Bicycle('세발', 3)
-console.log(myBicycle)
-console.log(daughtersBicycle)
+const integer = parseInt(str) //정수로 분석 문자데이터를 숫자로 변환 전역함수
+const float = parseFloat(str) //소수점자리까지 분석 전역함수
 
-class Car extends Vehicle {
-  constructor (name, wheel, license) {
-    super(name, wheel)
-    this.license = license
-  }
-}
+console.log(integer)
+console.log(float)
+console.log(typeof integer, typeof float)
 
-const myCar = new Car('벤츠', 4, true)
-const daugthersCar = new Car ('포르쉐', 4, false)
-
-console.log(myCar)
-console.log(daugthersCar)
+console.log('abs:', Math.abs(-12))
+console.log('min:', Math.min(2, 8))
+console.log('max:', Math.max(2, 8))
+console.log('ceil:', Math.ceil(3.14)) // 올림
+console.log('floor:', Math.floor(3.14)) // 내림
+console.log('round:', Math.round(3.14)) // 반올림
+console.log('random:', Math.random()) // 0 ~ 1 사이 (난수)
